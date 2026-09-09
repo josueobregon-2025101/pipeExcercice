@@ -1,0 +1,131 @@
+<div class="container"> <header class="header"> <h1>Operaciones Matematicas con RxJS</h1> <p>Ingresa los valores y transforma los datos.</p> </header> <!-- Entradas --> <section class="card inputs"> <h2>Ingresar datos</h2>
+<label> Número 1:
+     <input type="number" [ngModel]="numero1" (ngModelChange)="cambiarNumero1($event)"> 
+    </label>
+    
+<label> Número 2: 
+    <input type="number" [ngModel]="numero2" (ngModelChange)="cambiarNumero2($event)"> 
+</label>
+
+</section> <main class="grid">
+<!-- 1. Suma -->
+<section class="card">
+  <span class="number">01</span>
+  <h2>Suma</h2>
+  <p class="formula">{{ numero1 }} + {{ numero2 }}</p>
+
+  <div class="result">
+    <span>Resultado</span>
+    <strong>{{ suma$ | async }}</strong>
+  </div>
+</section>
+
+<!-- 2. Resta -->
+<section class="card">
+  <span class="number">02</span>
+  <h2>Resta</h2>
+  <p class="formula">{{ numero1 }} - {{ numero2 }}</p>
+
+  <div class="result">
+    <span>Resultado</span>
+    <strong>{{ resta$ | async }}</strong>
+  </div>
+</section>
+
+<!-- 3. Multiplicación -->
+<section class="card">
+  <span class="number">03</span>
+  <h2>Multiplicación</h2>
+  <p class="formula">{{ numero1 }} × {{ numero2 }}</p>
+
+  <div class="result">
+    <span>Resultado</span>
+    <strong>{{ multiplicacion$ | async }}</strong>
+  </div>
+</section>
+
+<!-- 4. División -->
+<section class="card">
+  <span class="number">04</span>
+  <h2>División</h2>
+  <p class="formula">{{ numero1 }} ÷ {{ numero2 }}</p>
+
+  <div class="result">
+    <span>Resultado</span>
+    <strong>{{ division$ | async }}</strong>
+  </div>
+</section>
+
+<!-- 5. Potencia -->
+<section class="card">
+  <span class="number">05</span>
+  <h2>Potencia</h2>
+  <p class="formula">{{ numero1 }}²</p>
+
+  <div class="result">
+    <span>Resultado</span>
+    <strong>{{ potencia$ | async }}</strong>
+  </div>
+</section>
+
+<!-- 6. Raíz -->
+<section class="card">
+  <span class="number">06</span>
+  <h2>Raíz cuadrada</h2>
+  <p class="formula">√{{ numero1 }}</p>
+
+  <div class="result">
+    <span>Resultado</span>
+    <strong>{{ raiz$ | async }}</strong>
+  </div>
+</section>
+
+<!-- 7. Porcentaje -->
+<section class="card">
+  <span class="number">07</span>
+  <h2>Porcentaje</h2>
+  <p class="formula">{{ numero2 }}% de {{ numero1 }}</p>
+
+  <div class="result">
+    <span>Resultado</span>
+    <strong>{{ porcentaje$ | async }}</strong>
+  </div>
+</section>
+
+<!-- 8. Valor absoluto -->
+<section class="card">
+  <span class="number">08</span>
+  <h2>Valor absoluto</h2>
+  <p class="formula">|{{ numero1 }}|</p>
+
+  <div class="result">
+    <span>Resultado</span>
+    <strong>{{ absoluto$ | async }}</strong>
+  </div>
+</section>
+
+<!-- 9. Módulo -->
+<section class="card">
+  <span class="number">09</span>
+  <h2>Módulo</h2>
+  <p class="formula">{{ numero1 }} % {{ numero2 }}</p>
+
+  <div class="result">
+    <span>Resultado</span>
+    <strong>{{ modulo$ | async }}</strong>
+  </div>
+</section>
+
+<!-- 10. Operación encadenada -->
+<section class="card featured">
+  <span class="number">10</span>
+  <h2>Operación encadenada</h2>
+  <p class="formula">({{ numero1 }} × {{ numero2 }} + 20)²</p>
+
+  <div class="result">
+    <span>Resultado</span>
+    <strong>{{ encadenada$ | async }}</strong>
+  </div>
+</section>
+
+</main> </div>
